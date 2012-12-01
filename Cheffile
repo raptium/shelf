@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'apt'
+cookbook 'ntp'
+cookbook 'nginx'
+cookbook 'git'
+cookbook 'python'
+cookbook 'rvm',
+    :git => 'https://github.com/fnichol/chef-rvm'
+cookbook 'mysql'
+cookbook 'mongodb'
+cookbook 'memcached'
+
+cookbook 'apt-fast-repos',
+    :path => 'kitchen/cookbooks/apt-fast-repos'
